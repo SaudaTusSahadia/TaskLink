@@ -8,6 +8,8 @@ import {
 } from "react-router";
 import MainLayout from './Layouts/MainLayout.jsx';
 import Home from './components/Home.jsx';
+import TermsAndConditions from './components/Terms&Conditions.jsx';
+import ErrorPage from './components/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -17,9 +19,17 @@ const router = createBrowserRouter([
       {
         index: true,
         Component: Home
+      },
+      {
+        path:"t&q",
+        Component: TermsAndConditions
       }
     ]
   },
+  {
+    path: "/*",
+    Component: ErrorPage
+  }
 ]);
 
 
