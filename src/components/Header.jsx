@@ -9,16 +9,16 @@ const Header = () => {
     const links = (
         <>
             <li>
-                <NavLink>Home</NavLink>
+                <NavLink to="/">Home</NavLink>
             </li>
             <li>
-                <NavLink>Add Task</NavLink>
+                <NavLink to="/addTask">Add Task</NavLink>
             </li>
             <li>
-                <NavLink>Browse Task</NavLink>
+                <NavLink to="/browseTask">Browse Task</NavLink>
             </li>
             <li>
-                <NavLink>My Posted Task</NavLink>
+                <NavLink to="/postedTask">My Posted Task</NavLink>
             </li>
         </>
     )
