@@ -11,6 +11,8 @@ import TermsAndConditions from './components/Terms&Conditions.jsx';
 import ErrorPage from './Pages/ErrorPage.jsx';
 import HomePage from './Pages/Home/HomePage.jsx';
 import AddTasks from './Pages/Tasks/AddTasks.jsx';
+import TaskDetails from './Pages/Tasks/TaskDetails.jsx';
+import UpdateTask from './Pages/Tasks/updateTask.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,15 @@ const router = createBrowserRouter([
       {
         path: "/addTask",
         Component: AddTasks
+      },
+      {
+        path: "/taskDetails/:id",
+        Component: TaskDetails
+      },
+      {
+        path: "/updateTask/:id",
+        loader: ({params})=> fetch(`http://localhost:3000/tasks/${params.id}`),
+        Component: UpdateTask
       },
       {
         path:"/t&q",

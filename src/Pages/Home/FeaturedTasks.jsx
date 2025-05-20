@@ -2,6 +2,7 @@ import React from 'react';
 import { BiDetail, BiEdit } from 'react-icons/bi';
 import { CgDetailsMore } from 'react-icons/cg';
 import { MdDeleteForever } from 'react-icons/md';
+import { Link, Links } from 'react-router';
 import Swal from 'sweetalert2';
 
 const FeaturedTasks = ({ task }) => {
@@ -48,8 +49,12 @@ const FeaturedTasks = ({ task }) => {
                     <p>Category of the Task : {category}</p>
                     <h4>Budget : {budget}</h4>
                     <div className="card-actions justify-end">
+                        <Link to={`/taskDetails/${_id}`}>
                         <button className='btn btn-ghost'>Details</button>
+                        </Link>
+                        <Link to={`/updateTask/${_id}`}>
                         <button className="btn btn-info"><BiEdit size={25}></BiEdit></button>
+                        </Link>
                         <button onClick={() => handleDelete(_id)} className="btn btn-ghost"><MdDeleteForever size={30}></MdDeleteForever></button>
                     </div>
                 </div>

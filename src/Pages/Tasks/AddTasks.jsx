@@ -73,7 +73,7 @@ const AddTasks = () => {
                         </div>
                         <div>
                             <label>User Email</label><br />
-                            <input name="email" type="text" placeholder="Enter your email" className="input input-info w-full" />
+                            <input name="email" type="email" placeholder="Enter your email" className="input input-info w-full" />
                         </div>
                         <div>
                             <label>User Name</label><br />
