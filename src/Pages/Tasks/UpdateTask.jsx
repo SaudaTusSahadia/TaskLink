@@ -1,9 +1,10 @@
 import React from 'react';
 import { useLoaderData } from 'react-router';
+import Swal from 'sweetalert2';
 
 const UpdateTask = () => {
 
-    const { taskName, category, description, deadline, budget, username, email } = useLoaderData();
+    const { _id, taskName, category, description, deadline, budget, username, email } = useLoaderData();
 
     const handleUpdateTask = (e) => {
         e.preventDefault();
@@ -11,6 +12,27 @@ const UpdateTask = () => {
         const formData = new FormData(form);
         const updatedTask = Object.fromEntries(formData.entries())
         console.log(updatedTask);
+
+        //send updated task to the db
+        fetch(`http://localhost:3000/tasks/${_id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updatedTask)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount) {
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Your Task Updated Successfully",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            })
     }
 
     return (

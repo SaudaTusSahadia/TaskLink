@@ -5,7 +5,7 @@ import { MdDeleteForever } from 'react-icons/md';
 import { Link, Links } from 'react-router';
 import Swal from 'sweetalert2';
 
-const FeaturedTasks = ({ task }) => {
+const FeaturedTasks = ({ task , tasks, setTasks }) => {
 
     const { _id, taskName, category, budget } = task;
 
@@ -35,6 +35,10 @@ const FeaturedTasks = ({ task }) => {
                                 text: "Your task has been deleted.",
                                 icon: "success"
                             });
+
+                            //remove the tasks from the state
+                            const remainingTasks = tasks.filter(tas => tas._id !== _id);
+                            setTasks(remainingTasks);
                         }
                     })
             }
