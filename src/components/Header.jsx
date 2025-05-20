@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router';
 import logo from "../assets/icons8-laptop-50.png"
+import "./Header.css";
 
 
 const Header = () => {
@@ -36,8 +37,7 @@ const Header = () => {
                             {links}
                         </ul>
                     </div>
-                    <img className='w-[40px]' src={logo} alt="logo" />
-                    <a className="btn btn-ghost text-xl">TaskLink</a>
+                    <a className="btn btn-ghost text-xl"><img className='w-[40px] mr-3' src={logo} alt="logo" />TaskLink</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

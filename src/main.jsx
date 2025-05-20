@@ -7,9 +7,10 @@ import {
   RouterProvider,
 } from "react-router";
 import MainLayout from './Layouts/MainLayout.jsx';
-import Home from './components/Home.jsx';
 import TermsAndConditions from './components/Terms&Conditions.jsx';
-import ErrorPage from './components/ErrorPage.jsx';
+import ErrorPage from './Pages/ErrorPage.jsx';
+import HomePage from './Pages/Home/HomePage.jsx';
+import AddTasks from './Pages/Tasks/AddTasks.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,10 +19,14 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        Component: Home
+        Component: HomePage
       },
       {
-        path:"t&q",
+        path: "/addTask",
+        Component: AddTasks
+      },
+      {
+        path:"/t&q",
         Component: TermsAndConditions
       }
     ]

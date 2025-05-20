@@ -4,13 +4,12 @@ import { Link } from 'react-router';
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-600 text-white w-full mt-20 p-10 text-center rounded space-y-10">
+    <footer className="bg-blue-600 text-white w-full md:mt-20 mt-4 p-10 text-center rounded space-y-10">
       
       {/* Navigation Links */}
       <div className="space-x-6 text-sm font-medium">
         <a className="link link-hover hover:text-yellow-200 transition">About us</a>
         <a className="link link-hover hover:text-yellow-200 transition">Contact</a>
-        <a className="link link-hover hover:text-yellow-200 transition">Events</a>
         <Link to="/t&q" className="link link-hover hover:text-yellow-200 transition">Terms and Conditions</Link>
       </div>
 
