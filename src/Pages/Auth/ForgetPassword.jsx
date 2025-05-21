@@ -36,7 +36,7 @@ const ForgetPassword = () => {
     return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-50 to-white px-4">
             {/* for dynamic title  */}
-            <title>ForgetPassword | Event Explorer</title>
+            <title>ForgetPassword | TaskLink</title>
             <div className="card bg-white w-full max-w-md shadow-xl rounded-2xl p-6 border border-orange-300">
                 <h1 className="text-2xl font-semibold text-center text-orange-600 mb-6">Forgot Password</h1>
 

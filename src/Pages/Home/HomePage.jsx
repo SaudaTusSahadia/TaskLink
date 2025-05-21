@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router';
 import FeaturedTasks from './FeaturedTasks';
+import ExtraSection1 from '../../components/ExtraSection1';
+import ExtraSection2 from '../../components/ExtraSection2';
 
 const HomePage = () => {
 
@@ -9,6 +11,7 @@ const HomePage = () => {
 
     return (
         <div>
+            <ExtraSection1></ExtraSection1>
             <h1 className='text-center text-3xl font-bold text-info my-5'>Featured Tasks</h1>
             <div className='grid md:grid-cols-2 grid-cols-1 gap-6'>
                 {
@@ -19,6 +22,7 @@ const HomePage = () => {
                         task={task}></FeaturedTasks>)
                 }
             </div>
+            <ExtraSection2></ExtraSection2>
         </div>
     );
 };

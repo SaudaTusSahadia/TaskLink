@@ -81,7 +81,7 @@ const Register = () => {
     return (
         <div className='min-h-screen flex items-center justify-center py-10 px-4'>
             {/* for dynamic title  */}
-            <title>Register | Event Explorer</title>
+            <title>Register | TaskLink</title>
             <div className="card bg-white w-full max-w-md shadow-xl rounded-2xl border-2 border-blue-400">
                 <h1 className='text-2xl font-semibold text-center text-blue-600 mt-6'>Create Your Account</h1>
 

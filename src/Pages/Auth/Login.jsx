@@ -55,7 +55,7 @@ const Login = () => {
     return (
         <div className="min-h-screen flex items-center justify-center px-4 py-12">
             {/* for dynamic title  */}
-            <title>Login | Event Explorer</title>
+            <title>Login | TaskLink</title>
             <div className="card bg-white w-full max-w-md shadow-xl rounded-2xl border-2 border-blue-400">
                 <h1 className="text-2xl font-semibold text-center text-blue-600 mt-6">
                     Login to Your Account
