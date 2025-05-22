@@ -39,6 +39,7 @@ const AddTasks = () => {
 
     return (
         <div className=''>
+            <title>Add Task | TaskLink</title>
             <div>
                 <Link to="/" className='flex items-center gap-2 text-2xl text-blue-600'><BiArrowBack></BiArrowBack>Go Back to Home</Link>
             </div>

@@ -3,6 +3,8 @@ import { useLoaderData } from 'react-router';
 import FeaturedTasks from './FeaturedTasks';
 import ExtraSection1 from '../../components/ExtraSection1';
 import ExtraSection2 from '../../components/ExtraSection2';
+import feature from '../../assets/Animation - 1747895711054.json'
+import Lottie from 'lottie-react';
 
 const HomePage = () => {
 
@@ -12,7 +14,7 @@ const HomePage = () => {
     return (
         <div>
             <ExtraSection1></ExtraSection1>
-            <h1 className='text-center text-3xl font-bold text-info my-5'>Featured Tasks</h1>
+            <h1 className='flex justify-center items-center gap-5 text-center text-3xl font-bold text-blue-500 my-5'><Lottie className='h-15' animationData={feature} />Featured Tasks</h1>
             <div className='grid md:grid-cols-2 grid-cols-1 gap-6'>
                 {
                     tasks.map(task=><FeaturedTasks 
