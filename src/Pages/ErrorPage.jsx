@@ -1,6 +1,7 @@
 import React from 'react';
-import pic from "../assets/page-found-concept-illustration.png"
 import { Link } from 'react-router';
+import notFound from '../assets/404.json'
+import Lottie from 'lottie-react';
 
 const ErrorPage = () => {
     return (
@@ -18,7 +19,7 @@ const ErrorPage = () => {
                 </p>
             </div>
             <div className='md:w-1/2'>
-                <img src={pic} alt="error pic" />
+                <Lottie className='' animationData={notFound} />
             </div>
         </div>
     );

@@ -15,16 +15,16 @@ const Footer = () => {
 
       {/* Social Icons */}
       <div className="flex justify-center gap-6 text-2xl">
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-200 transition">
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-200 hover:scale-105 transition-transform duration-300">
           <FaTwitter />
         </a>
-        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-200 transition">
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-200 hover:scale-105 transition-transform duration-300">
           <FaYoutube />
         </a>
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-200 transition">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-200 hover:scale-105 transition-transform duration-300">
           <FaFacebookSquare />
         </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-200 transition">
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-200 hover:scale-105 transition-transform duration-300">
           <FaInstagramSquare />
         </a>
       </div>

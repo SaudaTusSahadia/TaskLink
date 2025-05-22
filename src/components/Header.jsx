@@ -101,7 +101,7 @@ const Header = () => {
                     </div>
                     <a className="btn btn-ghost text-xl">
                         <img className="w-10" src={logo} alt="" />
-                        <p className="font-bold ml-2 hidden sm:block">
+                        <p className="font-bold hidden sm:block">
                             Task<span className="text-blue-600">Link</span>
                         </p>
                     </a>

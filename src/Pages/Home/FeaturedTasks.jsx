@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BiEdit } from "react-icons/bi";
 import { MdDeleteForever } from "react-icons/md";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const FeaturedTasks = ({ task, tasks, setTasks }) => {
   const { _id, taskName, category, budget } = task;
+  const {user}=useContext(AuthContext);
+  const navigate=useNavigate();
 
   const handleDelete = (_id) => {
-    Swal.fire({
+
+    if(user){
+            Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
       icon: "warning",
@@ -36,6 +41,11 @@ const FeaturedTasks = ({ task, tasks, setTasks }) => {
           });
       }
     });
+    }
+    else{
+      navigate('/auth/login');
+    }
+
   };
 
   return (
