@@ -44,9 +44,6 @@ const Header = () => {
             <li>
                 <NavLink to="/">Home</NavLink>
             </li>
-            <li>
-                <NavLink to="/auth/register">Registration</NavLink>
-            </li>
             {
                 user && <li>
                     <NavLink to="/addTask">Add Task</NavLink>
@@ -123,6 +120,18 @@ const Header = () => {
                             className="btn btn-outline text-blue-600 hover:text-white hover:bg-blue-500 transition duration-300"
                         >
                             Login
+                        </Link>
+                    )}
+
+                    {/* for register  */}
+                    {user ? ( 
+                        ''
+                    ) : (
+                        <Link
+                            to="/auth/register"
+                            className="btn text-white hover:text-blue-600 hover:bg-white bg-blue-600 transition duration-300"
+                        >
+                            Register
                         </Link>
                     )}
 

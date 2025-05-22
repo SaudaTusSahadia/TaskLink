@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import FeaturedTasks from './FeaturedTasks';
 import ExtraSection1 from '../../components/ExtraSection1';
@@ -9,8 +9,25 @@ import Slider from '../../components/Slider';
 
 const HomePage = () => {
 
+   
+
+
+
+    
+    
+    
+    
     const initialTasks = useLoaderData();    
-    const [tasks, setTasks] = useState(initialTasks)
+    const [tasks, setTasks] = useState([initialTasks])
+    
+    useEffect(() => {
+      fetch('http://localhost:3000/tasks/recent')
+        .then(res => res.json())
+        .then(data => setTasks(data))
+        .catch(err => console.error(err));
+    }, []);
+
+
 
     return (
         <div>

@@ -2,9 +2,10 @@ import React from 'react';
 import { BiArrowBack } from 'react-icons/bi';
 import { Link } from 'react-router';
 import Swal from 'sweetalert2';
+import add from '../../assets/Animation - 1747916551008.json'
+import Lottie from 'lottie-react';
 
 const AddTasks = () => {
-
     const handleAddTask = e => {
         e.preventDefault();
         const form = e.target;
@@ -12,7 +13,6 @@ const AddTasks = () => {
         const newTask = Object.fromEntries(formData.entries());
         console.log(newTask);
 
-        //send tasks to the db
         fetch('http://localhost:3000/tasks', {
             method: "POST",
             headers: {
@@ -38,55 +38,80 @@ const AddTasks = () => {
     }
 
     return (
-        <div className=''>
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 p-6">
             <title>Add Task | TaskLink</title>
-            <div>
-                <Link to="/" className='flex items-center gap-2 text-2xl text-blue-600'><BiArrowBack></BiArrowBack>Go Back to Home</Link>
+
+            <div className="mb-6">
+                <Link to="/" className="flex items-center gap-2 text-lg text-blue-600 hover:text-blue-800 transition-all">
+                    <BiArrowBack className="text-xl" /> Go Back to Home
+                </Link>
             </div>
-            <div>
-                <div className='text-center my-6'>
-                    <h1 className='text-2xl font-bold'>Add New Task</h1>
-                    <p className='text-slate-600 mt-5'>Easily post your freelance job requirements through our streamlined "Add Task" feature. Whether you're looking for a web developer, graphic designer, content writer, or any other skilled professional, TaskLink makes it simple to get started. Just provide a clear title, detailed description, budget, deadline, and required skill set — and your task will be instantly visible to a network of eager freelancers. This intuitive form ensures that your project needs are accurately captured, helping you connect with the right talent quickly. With TaskLink, finding help is just a few clicks away — post a task and get started today!</p>
+
+            <div className="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-2xl">
+                <div className="text-center mb-8">
+                    <h1 className="flex justify-center items-center text-3xl font-bold text-blue-700"><Lottie className='h-15 text-blue-500' animationData={add} />Add New Task</h1>
+                    <p className="text-slate-600 mt-4 text-sm md:text-base leading-relaxed">
+                        Easily post your freelance job requirements through our streamlined "Add Task" feature. Just provide a clear title, detailed description, budget, deadline, and required skill set — and your task will be instantly visible to a network of eager freelancers.
+                    </p>
                 </div>
+
                 <form onSubmit={handleAddTask}>
-                    <div className='grid md:grid-cols-2 grid-cols-1 gap-5'>
+                    <div className="grid md:grid-cols-2 gap-6">
                         <div>
-                            <label>Task Name</label><br />
-                            <input name="taskName" type="text" placeholder="Add your Task Name" className="input input-info w-full" />
+                            <label className="block mb-1 font-medium text-slate-700">Task Name</label>
+                            <input name="taskName" type="text" placeholder="Add your Task Name"
+                                className="input input-bordered w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
                         </div>
+
                         <div>
-                            <label>Category</label><br />
-                            <input name="category" type="text" placeholder="Add your Category" className="input input-info w-full" list='category' />
+                            <label className="block mb-1 font-medium text-slate-700">Category</label>
+                            <input name="category" type="text" placeholder="Add your Category" list="category"
+                                className="input input-bordered w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
                             <datalist id="category">
-                                <option value="Web Development"></option>
-                                <option value="Design"></option>
-                                <option value="Writing"></option>
-                                <option value="Marketing"></option>
+                                <option value="Web Development" />
+                                <option value="Design" />
+                                <option value="Writing" />
+                                <option value="Marketing" />
                             </datalist>
                         </div>
-                        <div>
-                            <label>Description</label><br />
-                            <input name="description" type="text" placeholder="Add your Description" className="input input-info w-full" />
+
+                        <div className="md:col-span-2">
+                            <label className="block mb-1 font-medium text-slate-700">Description</label>
+                            <textarea name="description" placeholder="Add your Description"
+                                className="textarea textarea-bordered w-full h-24 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"></textarea>
                         </div>
+
                         <div>
-                            <label>Deadline</label><br />
-                            <input name="deadline" type="date" className="input input-info w-full" />
+                            <label className="block mb-1 font-medium text-slate-700">Deadline</label>
+                            <input name="deadline" type="date"
+                                className="input input-bordered w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
                         </div>
+
                         <div>
-                            <label>User Email</label><br />
-                            <input name="email" type="email" placeholder="Enter your email" className="input input-info w-full" />
+                            <label className="block mb-1 font-medium text-slate-700">User Email</label>
+                            <input name="email" type="email" placeholder="Enter your email"
+                                className="input input-bordered w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
                         </div>
+
                         <div>
-                            <label>User Name</label><br />
-                            <input name="username" type="text" placeholder="Enter your name" className="input input-info w-full" />
+                            <label className="block mb-1 font-medium text-slate-700">User Name</label>
+                            <input name="username" type="text" placeholder="Enter your name"
+                                className="input input-bordered w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+                        </div>
+
+                        <div>
+                            <label className="block mb-1 font-medium text-slate-700">Budget</label>
+                            <input name="budget" type="text" placeholder="Add your Budget"
+                                className="input input-bordered w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
                         </div>
                     </div>
-                    <div className='my-5'>
-                        <label>Budget</label><br />
-                        <input name="budget" type="text" placeholder="Add your Budget" className="input input-info w-full" />
-                    </div>
-                    <div>
-                        <input className='btn btn-info w-full' type="submit" value="Add This Task" />
+
+                    <div className="mt-8">
+                        <input
+                            className="btn bg-gradient-to-r from-blue-500 to-purple-500 text-white w-full rounded-lg hover:scale-[1.02] transition-transform duration-300"
+                            type="submit"
+                            value="Add This Task"
+                        />
                     </div>
                 </form>
             </div>

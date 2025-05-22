@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const FeaturedTasks = ({ task, tasks, setTasks }) => {
-  const { _id, taskName, category, budget } = task;
+  const { _id, taskName, category, budget, deadline } = task;
   const {user}=useContext(AuthContext);
   const navigate=useNavigate();
 
@@ -48,6 +48,7 @@ const FeaturedTasks = ({ task, tasks, setTasks }) => {
 
   };
 
+
   return (
     <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition duration-300 border border-base-200">
       <div className="card-body text-center space-y-2">
@@ -56,6 +57,7 @@ const FeaturedTasks = ({ task, tasks, setTasks }) => {
           <span className="font-medium text-base">Category:</span> {category}
         </p>
         <p className="text-lg font-bold text-primary">Budget: ₹{budget}</p>
+        <p className="text-sm mt-1 text-blue-600">Deadline: {deadline?.slice(0, 10)}</p>
 
         <div className="divider my-1" />
 
