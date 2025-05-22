@@ -19,6 +19,7 @@ import AuthProvider from './Provider/AuthProvider.jsx';
 import AuthLayout from './Pages/Auth/AuthLayout.jsx';
 import ForgetPassword from './Pages/Auth/ForgetPassword.jsx'
 import PrivateRoute from './Provider/PrivateRoute.jsx';
+import BrowseTasks from './Pages/Tasks/BrowseTasks.jsx';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
       {
         path: "/addTask",
         element: <PrivateRoute><AddTasks></AddTasks></PrivateRoute>
+      },
+      {
+        path: "/browseTask",
+        loader: ()=> fetch('http://localhost:3000/tasks'),
+        Component: BrowseTasks
       },
       {
         path: "/taskDetails/:id",

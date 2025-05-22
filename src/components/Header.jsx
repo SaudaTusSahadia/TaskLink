@@ -20,29 +20,14 @@ const Header = () => {
             });
     };
 
-    // const links = (
-    //     <>
-    //         <li>
-    //             <NavLink to="/">Home</NavLink>
-    //         </li>
-    //         <li>
-    //             <NavLink to="/addTask">Add Task</NavLink>
-    //         </li>
-    //         <li>
-    //             <NavLink to="/browseTask">Browse Task</NavLink>
-    //         </li>
-    //         <li>
-    //             <NavLink to="/postedTask">My Posted Task</NavLink>
-    //         </li>
-    //     </>
-    // )
-
-
 
     const links = (
         <>
             <li>
                 <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+                <NavLink to="/browseTask">Browse Tasks</NavLink>
             </li>
             {
                 user && <li>

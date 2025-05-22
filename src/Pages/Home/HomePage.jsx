@@ -8,14 +8,6 @@ import Lottie from 'lottie-react';
 import Slider from '../../components/Slider';
 
 const HomePage = () => {
-
-   
-
-
-
-    
-    
-    
     
     const initialTasks = useLoaderData();    
     const [tasks, setTasks] = useState([initialTasks])
