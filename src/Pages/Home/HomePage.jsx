@@ -14,7 +14,7 @@ const HomePage = () => {
     const [tasks, setTasks] = useState([initialTasks])
     
     useEffect(() => {
-      fetch('http://localhost:3000/tasks/recent')
+      fetch('https://assignment10-server-silk.vercel.app/tasks/recent')
         .then(res => res.json())
         .then(data => setTasks(data))
         .catch(err => console.error(err));

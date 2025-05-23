@@ -23,7 +23,7 @@ const FeaturedTasks = ({ task, tasks, setTasks }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/tasks/${_id}`, {
+        fetch(`https://assignment10-server-silk.vercel.app/tasks/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

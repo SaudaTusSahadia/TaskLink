@@ -28,7 +28,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: () => fetch('http://localhost:3000/tasks'),
+        loader: () => fetch('https://assignment10-server-silk.vercel.app/tasks'),
         Component: HomePage
       },
       {
@@ -37,17 +37,17 @@ const router = createBrowserRouter([
       },
       {
         path: "/browseTask",
-        loader: () => fetch('http://localhost:3000/tasks'),
+        loader: () => fetch('https://assignment10-server-silk.vercel.app/tasks'),
         Component: BrowseTasks
       },
       {
         path: "/taskDetails/:id",
-        loader: ({ params }) => fetch(`http://localhost:3000/tasks/${params.id}`),
+        loader: ({ params }) => fetch(`https://assignment10-server-silk.vercel.app/tasks/${params.id}`),
         element: <PrivateRoute><TaskDetails></TaskDetails></PrivateRoute>
       },
       {
         path: "/updateTask/:id",
-        loader: ({ params }) => fetch(`http://localhost:3000/tasks/${params.id}`),
+        loader: ({ params }) => fetch(`https://assignment10-server-silk.vercel.app/tasks/${params.id}`),
         element: <PrivateRoute><UpdateTask></UpdateTask></PrivateRoute>
       },
       {

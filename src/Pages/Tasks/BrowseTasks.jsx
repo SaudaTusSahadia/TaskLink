@@ -8,7 +8,7 @@ const BrowseTasks = () => {
     const [tasks, setTasks] = useState([initialTasks])
     
     useEffect(() => {
-      fetch('http://localhost:3000/tasks')
+      fetch('https://assignment10-server-silk.vercel.app/tasks')
         .then(res => res.json())
         .then(data => setTasks(data))
         .catch(err => console.error(err));
