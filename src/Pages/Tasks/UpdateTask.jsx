@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 
 const UpdateTask = () => {
 
-    const { _id, taskName, category, description, deadline, budget, username, email } = useLoaderData();
+    const { _id, taskName, category, description, deadline, budget, username, email, image } = useLoaderData();
 
     const handleUpdateTask = (e) => {
         e.preventDefault();
@@ -77,6 +77,16 @@ const UpdateTask = () => {
                     <div className='my-5'>
                         <label>Budget</label><br />
                         <input name="budget" defaultValue={budget} type="text" placeholder="Add your Budget" className="input input-info w-full" />
+                    </div>
+                    <div className='my-5'>
+                        <label>Image URL</label><br />
+                        <input
+                            name="image"
+                            defaultValue={image}
+                            type="url"
+                            placeholder="Add your image URL"
+                            className="input input-info w-full"
+                        />
                     </div>
                     <div>
                         <input className='btn btn-info w-full' type="submit" value="Update This Task" />

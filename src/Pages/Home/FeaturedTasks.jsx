@@ -1,88 +1,45 @@
 import React, { useContext } from "react";
 import { BiEdit } from "react-icons/bi";
-import { MdDeleteForever } from "react-icons/md";
 import { Link, useNavigate } from "react-router";
-import Swal from "sweetalert2";
+import { motion } from "framer-motion";
 import { AuthContext } from "../../Provider/AuthProvider";
 
-const FeaturedTasks = ({ task, tasks, setTasks }) => {
-  const { _id, taskName, category, budget, deadline } = task;
-  const {user}=useContext(AuthContext);
-  const navigate=useNavigate();
-
-  const handleDelete = (_id) => {
-
-    if(user){
-            Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        fetch(`http://localhost:3000/tasks/${_id}`, {
-          method: "DELETE",
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            if (data.deletedCount) {
-              Swal.fire({
-                title: "Deleted!",
-                text: "Your task has been deleted.",
-                icon: "success",
-              });
-
-              const remainingTasks = tasks.filter((tas) => tas._id !== _id);
-              setTasks(remainingTasks);
-            }
-          });
-      }
-    });
-    }
-    else{
-      navigate('/auth/login');
-    }
-
-  };
-
+const FeaturedTasks = ({ task }) => {
+  const { _id, taskName, description, image } = task;
+  const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   return (
-    <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition duration-300 border border-base-200">
-      <div className="card-body text-center space-y-2">
-        <h2 className="card-title text-2xl font-semibold">{taskName}</h2>
-        <p className="text-sm text-gray-500 dark:text-gray-400">
-          <span className="font-medium text-base">Category:</span> {category}
-        </p>
-        <p className="text-lg font-bold text-primary">Budget: ₹{budget}</p>
-        <p className="text-sm mt-1 text-blue-600">Deadline: {deadline?.slice(0, 10)}</p>
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4 }}
+      className="bg-gradient-to-br from-blue-50 via-white to-purple-100 rounded-2xl shadow-md overflow-hidden flex flex-col md:flex-row items-stretch hover:shadow-lg transition-shadow duration-300"
+    >
+      <img
+        src={image}
+        alt="Task"
+        className="w-full md:w-1/3 object-cover h-40 md:h-48 rounded-t-2xl md:rounded-t-none md:rounded-l-2xl"
+      />
 
-        <div className="divider my-1" />
+      <div className="p-4 flex flex-col justify-between flex-1">
+        <div>
+          <h2 className="text-xl font-bold text-blue-700 mb-1">{taskName}</h2>
+          <p className="text-slate-600 text-sm leading-snug">
+            {description?.slice(0, 80)}...
+          </p>
+        </div>
 
-        <div className="flex flex-wrap justify-center gap-3 mt-2">
+        <div className="mt-4 flex justify-end">
           <Link to={`/taskDetails/${_id}`}>
-            <button className="btn btn-outline btn-primary btn-sm">
-              📄 Details
+            <button className="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm rounded-lg hover:scale-105 transition-transform duration-200">
+              <BiEdit className="text-base" />
+              <span>See Details</span>
             </button>
           </Link>
-
-          <Link to={`/updateTask/${_id}`}>
-            <button className="btn btn-outline btn-info btn-sm flex items-center gap-1">
-              <BiEdit size={18} /> Edit
-            </button>
-          </Link>
-
-          <button
-            onClick={() => handleDelete(_id)}
-            className="btn btn-outline btn-error btn-sm flex items-center gap-1"
-          >
-            <MdDeleteForever size={20} /> Delete
-          </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

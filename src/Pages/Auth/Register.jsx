@@ -172,8 +172,9 @@ const Register = () => {
           </p>
         </div>
       </motion.div>
-
       <ToastContainer />
+
+
     </div>
   );
 };

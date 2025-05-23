@@ -82,7 +82,7 @@ const Header = () => {
                         </ul>
                     </div>
                     <a className="btn btn-ghost text-xl">
-                        <img className="w-10" src={logo} alt="" />
+                        <img className="w-10 hidden sm:block" src={logo} alt="" />
                         <p className="font-bold hidden sm:block">
                             Task<span className="text-blue-600">Link</span>
                         </p>

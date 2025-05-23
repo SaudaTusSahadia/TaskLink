@@ -13,7 +13,7 @@ const ExtraSection1 = () => {
                 <FaUsers className="text-blue-600" size={40} />
                 <div>
                     <h1 className="text-3xl font-bold text-gray-800">
-                        <CountUp start={5000} end={10000} duration={10} />+
+                        <CountUp start={5000} end={10000} duration={20} />+
                     </h1>
                     <p className="text-gray-600">Users Daily</p>
                 </div>
@@ -24,7 +24,7 @@ const ExtraSection1 = () => {
                 <FaStar className="text-yellow-400" size={35} />
                 <div>
                     <h1 className="text-3xl font-bold text-gray-800">
-                        <CountUp start={30000} end={50000} duration={10} />+
+                        <CountUp start={30000} end={50000} duration={20} />+
                     </h1>
                     <p className="text-gray-600">Talents</p>
                 </div>
@@ -35,7 +35,7 @@ const ExtraSection1 = () => {
                 <MdOutlineSecurity className="text-green-600" size={35} />
                 <div>
                     <h1 className="text-3xl font-bold text-gray-800">
-                        <CountUp end={100} duration={6} />%
+                        <CountUp end={100} duration={15} />%
                     </h1>
                     <p className="text-gray-600">Security</p>
                 </div>
@@ -46,7 +46,7 @@ const ExtraSection1 = () => {
                 <FcCustomerSupport size={40} />
                 <div>
                     <h1 className="text-3xl font-bold text-gray-800">
-                        <CountUp end={24} duration={6} />x<CountUp end={7} duration={5} />
+                        <CountUp end={24} duration={10} />x<CountUp end={7} duration={10} />
                     </h1>
                     <p className="text-gray-600">Support</p>
                 </div>

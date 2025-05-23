@@ -6,6 +6,7 @@ import ExtraSection2 from '../../components/ExtraSection2';
 import feature from '../../assets/Animation - 1747895711054.json'
 import Lottie from 'lottie-react';
 import Slider from '../../components/Slider';
+import { ToastContainer } from 'react-toastify';
 
 const HomePage = () => {
     
