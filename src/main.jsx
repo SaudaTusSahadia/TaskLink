@@ -21,8 +21,11 @@ import ForgetPassword from './Pages/Auth/ForgetPassword.jsx'
 import PrivateRoute from './Provider/PrivateRoute.jsx';
 import BrowseTasks from './Pages/Tasks/BrowseTasks.jsx';
 import MyTasks from './Pages/Tasks/MyTasks.jsx';
+<<<<<<< HEAD
 import { ThemeProvider } from './Provider/ThemeProvider.jsx';
 import MyProfile from './Pages/Auth/MyProfile.jsx';
+=======
+>>>>>>> 39ef2e6651c87e142add5b434abddb22148a58f0
 
 const router = createBrowserRouter([
   {
@@ -58,10 +61,13 @@ const router = createBrowserRouter([
         element: <PrivateRoute><MyTasks></MyTasks></PrivateRoute>
       },
       {
+<<<<<<< HEAD
         path: "/MyProfile",
         element: <PrivateRoute><MyProfile></MyProfile></PrivateRoute>
       },
       {
+=======
+>>>>>>> 39ef2e6651c87e142add5b434abddb22148a58f0
         path: "/t&q",
         Component: TermsAndConditions
       }
