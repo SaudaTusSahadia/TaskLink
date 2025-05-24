@@ -1,18 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BiArrowBack } from 'react-icons/bi';
 import { FaEnvelope, FaUserAlt } from 'react-icons/fa';
 import { MdTaskAlt, MdCategory, MdDescription, MdDateRange, MdAttachMoney, MdImage } from 'react-icons/md';
-import { Link } from 'react-router'; // Corrected import
+import { Link } from 'react-router'; 
 import Swal from 'sweetalert2';
 import Lottie from 'lottie-react';
 import add from '../../assets/Animation - 1747916551008.json';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const AddTasks = () => {
+
+    const { user } = useContext(AuthContext);
+
     const handleAddTask = e => {
         e.preventDefault();
         const form = e.target;
         const formData = new FormData(form);
         const newTask = Object.fromEntries(formData.entries());
+
+        newTask.TaskOwnerEmail = user.email;
+
+        console.log(newTask);
+        
 
         fetch('https://assignment10-server-silk.vercel.app/tasks', {
             method: "POST",
