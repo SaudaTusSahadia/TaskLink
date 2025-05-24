@@ -41,7 +41,7 @@ const router = createBrowserRouter([
       {
         path: "/browseTask",
         loader: () => fetch('https://assignment10-server-silk.vercel.app/tasks'),
-        element: <PrivateRoute><BrowseTasks></BrowseTasks></PrivateRoute>
+        element: <BrowseTasks></BrowseTasks>
       },
       {
         path: "/taskDetails/:id",

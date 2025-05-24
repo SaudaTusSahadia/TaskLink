@@ -2,16 +2,32 @@ import Lottie from 'lottie-react';
 import React from 'react';
 import { FaArrowAltCircleRight, FaDatabase, FaKeyboard, FaPenFancy, FaSpellCheck } from 'react-icons/fa';
 import groovyWalkAnimation from "../assets/Animation - 1747895151543.json";
+import { Typewriter } from 'react-simple-typewriter'
 
 const ExtraSection2 = () => {
     return (
         <div className='my-10 md:my-20 text-center'>
             <div className="text-center mb-10">
                 <h1 className="flex justify-center items-center gap-6 text-4xl md:text-5xl font-extrabold mb-3 tracking-tight">
-                <Lottie className='h-20' animationData={groovyWalkAnimation} />Job Practice
+                    <Lottie className='h-20' animationData={groovyWalkAnimation} />Job Practice
                 </h1>
-                <p className="text-lg md:text-xl text-gray-400 max-w-xl mx-auto">
-                    Learn, practice, and grow with hands-on exercises crafted to sharpen your skills and boost your career with confidence.
+                <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto text-center leading-relaxed">
+                    <Typewriter
+                        words={[
+                            'Learn the Essentials',
+                            'Practice with Purpose',
+                            'Grow with Confidence',
+                            'Master Real-World Skills',
+                            'Level Up Your Career',
+                        ]}
+                        loop={false}
+                        cursor
+                        cursorStyle='_'
+                        typeSpeed={70}
+                        deleteSpeed={50}
+                        delaySpeed={1000}
+                    />{' '}
+                    through hands-on, industry-relevant exercises designed to refine your abilities, solidify your understanding, and empower you to succeed in the modern tech landscape.
                 </p>
             </div>
 
