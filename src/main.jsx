@@ -20,6 +20,9 @@ import AuthLayout from './Pages/Auth/AuthLayout.jsx';
 import ForgetPassword from './Pages/Auth/ForgetPassword.jsx'
 import PrivateRoute from './Provider/PrivateRoute.jsx';
 import BrowseTasks from './Pages/Tasks/BrowseTasks.jsx';
+import MyTasks from './Pages/Tasks/MyTasks.jsx';
+import { ThemeProvider } from './Provider/ThemeProvider.jsx';
+import MyProfile from './Pages/Auth/MyProfile.jsx';
 
 const router = createBrowserRouter([
   {
@@ -38,7 +41,7 @@ const router = createBrowserRouter([
       {
         path: "/browseTask",
         loader: () => fetch('https://assignment10-server-silk.vercel.app/tasks'),
-        Component: BrowseTasks
+        element: <PrivateRoute><BrowseTasks></BrowseTasks></PrivateRoute>
       },
       {
         path: "/taskDetails/:id",
@@ -49,6 +52,14 @@ const router = createBrowserRouter([
         path: "/updateTask/:id",
         loader: ({ params }) => fetch(`https://assignment10-server-silk.vercel.app/tasks/${params.id}`),
         element: <PrivateRoute><UpdateTask></UpdateTask></PrivateRoute>
+      },
+      {
+        path: "/postedTask",
+        element: <PrivateRoute><MyTasks></MyTasks></PrivateRoute>
+      },
+      {
+        path: "/MyProfile",
+        element: <PrivateRoute><MyProfile></MyProfile></PrivateRoute>
       },
       {
         path: "/t&q",
@@ -82,9 +93,12 @@ const router = createBrowserRouter([
 
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  <ThemeProvider>
+      <StrictMode>
     <AuthProvider>
       <RouterProvider router={router} />
     </AuthProvider>
-  </StrictMode>,
+  </StrictMode>
+  </ThemeProvider>
+
 )
