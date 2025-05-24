@@ -37,7 +37,7 @@ const Header = () => {
       
       {user && (
         <li>
-          <NavLink to="/auth/update">MyProfile</NavLink>
+          <NavLink to="/MyProfile">MyProfile</NavLink>
         </li>
       )}
         <li>
