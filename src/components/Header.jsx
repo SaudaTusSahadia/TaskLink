@@ -30,22 +30,19 @@ const Header = () => {
       <li>
         <NavLink to="/browseTask">Browse Tasks</NavLink>
       </li>
-      
+
         <li>
           <NavLink to="/addTask">Add Task</NavLink>
         </li>
-    
-      { user && 
-        <li>
-          <NavLink to="/MyProfile">MyProfile</NavLink>
-        </li>
-      }
-  
       
+      {user && (
+        <li>
+          <NavLink to="/auth/update">MyProfile</NavLink>
+        </li>
+      )}
         <li>
           <NavLink to="/postedTask">My Posted Task</NavLink>
         </li>
-      
     </>
   );
 
