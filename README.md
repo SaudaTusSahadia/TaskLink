@@ -48,6 +48,31 @@ Using Tailwind CSS to ensure full responsiveness across all devices.
 
 ---
 
+
+## 📦 Installation
+
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/SaudaTusSahadia/TaskLink.git
+   cd TaskLink
+   ```
+
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+3. **Set up environment variables:**
+   - Copy `.env.example` to `.env.local` and fill in your Firebase and backend API credentials.
+
+4. **Start the development server:**
+   ```sh
+   npm run dev
+   ```
+
+---
+
+
 ## 🛠️ Technology Stack
 
 ### Client Side
