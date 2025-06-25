@@ -24,6 +24,8 @@ import MyTasks from './Pages/Tasks/MyTasks.jsx';
 // <<<<<<< HEAD
 import { ThemeProvider } from './Provider/ThemeProvider.jsx';
 import MyProfile from './Pages/Auth/MyProfile.jsx';
+import AboutUs from './components/AboutUs.jsx';
+import Support from './components/Support.jsx';
 // =======
 // >>>>>>> 39ef2e6651c87e142add5b434abddb22148a58f0
 
@@ -70,6 +72,14 @@ const router = createBrowserRouter([
 // >>>>>>> 39ef2e6651c87e142add5b434abddb22148a58f0
         path: "/t&q",
         Component: TermsAndConditions
+      },
+      {
+        path:"/aboutUs",
+        Component: AboutUs
+      },
+      {
+        path: "/support",
+        Component: Support
       }
     ]
   },

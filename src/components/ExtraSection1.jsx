@@ -6,10 +6,12 @@ import { MdOutlineSecurity } from 'react-icons/md';
 
 const ExtraSection1 = () => {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 bg-blue-50 my-10 py-10 px-4 rounded-xl shadow-md">
+        <div>
+            <h1 className='text-3xl text-center mt-5 md:mt-15 text-success font-bold'>Our Achievements</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 bg-gradient-to-tl from-base-300 via-base-200 to-base-100 my-10 py-10 px-4 rounded-xl shadow-md">
 
             {/* Users Daily */}
-            <div className="flex items-center gap-4 p-4 bg-white rounded-lg shadow hover:shadow-lg transition duration-300">
+            <div className="flex items-center gap-4 p-4 bg-accent rounded-lg shadow hover:shadow-lg transition duration-300">
                 <FaUsers className="text-blue-600" size={40} />
                 <div>
                     <h1 className="text-3xl font-bold text-gray-800">
@@ -20,7 +22,7 @@ const ExtraSection1 = () => {
             </div>
 
             {/* Talents */}
-            <div className="flex items-center gap-4 p-4 bg-white rounded-lg shadow hover:shadow-lg transition duration-300">
+            <div className="flex items-center gap-4 p-4 bg-info rounded-lg shadow hover:shadow-lg transition duration-300">
                 <FaStar className="text-yellow-400" size={35} />
                 <div>
                     <h1 className="text-3xl font-bold text-gray-800">
@@ -31,7 +33,7 @@ const ExtraSection1 = () => {
             </div>
 
             {/* Security */}
-            <div className="flex items-center gap-4 p-4 bg-white rounded-lg shadow hover:shadow-lg transition duration-300">
+            <div className="flex items-center gap-4 p-4 bg-success rounded-lg shadow hover:shadow-lg transition duration-300">
                 <MdOutlineSecurity className="text-green-600" size={35} />
                 <div>
                     <h1 className="text-3xl font-bold text-gray-800">
@@ -42,7 +44,7 @@ const ExtraSection1 = () => {
             </div>
 
             {/* Support */}
-            <div className="flex items-center gap-4 p-4 bg-white rounded-lg shadow hover:shadow-lg transition duration-300">
+            <div className="flex items-center gap-4 p-4 bg-neutral rounded-lg shadow hover:shadow-lg transition duration-300">
                 <FcCustomerSupport size={40} />
                 <div>
                     <h1 className="text-3xl font-bold text-gray-800">
@@ -52,6 +54,7 @@ const ExtraSection1 = () => {
                 </div>
             </div>
 
+        </div>
         </div>
     );
 };

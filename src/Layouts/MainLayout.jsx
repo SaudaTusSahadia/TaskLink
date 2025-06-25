@@ -3,12 +3,14 @@ import { Outlet } from 'react-router';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { ToastContainer } from 'react-toastify';
+import Slider from '../components/Slider';
 
 const MainLayout = () => {
     return (
-        <div>
+        <div className='bg-gradient-to-br from-base-300 via-base-200 to-info'>
             <Header></Header>
-            <div className='md:max-w-7xl mx-auto px-3 md:mt-15 mt-4'>
+            
+            <div className='md:max-w-7xl mx-auto pt-16'>
                 <Outlet></Outlet>
             </div>
             <Footer></Footer>

@@ -9,7 +9,7 @@ const AuthLayout = () => {
         <div>
             <div>
             <Header></Header>
-            <div className='max-w-screen  mx-auto'>
+            <div className='max-w-screen  mx-auto pt-16'>
             <Outlet></Outlet>
             </div>
             <Footer></Footer>

@@ -14,7 +14,7 @@ const FeaturedTasks = ({ task }) => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
-      className="bg-gradient-to-br from-blue-50 via-white to-purple-100 rounded-2xl shadow-md overflow-hidden flex flex-col md:flex-row items-stretch hover:shadow-lg transition-shadow duration-300"
+      className="bg-gradient-to-br from-base-100 to-base-300 rounded-2xl shadow-md overflow-hidden flex flex-col md:flex-row items-stretch hover:shadow-lg transition-shadow duration-300"
     >
       <img
         src={image}
@@ -32,7 +32,7 @@ const FeaturedTasks = ({ task }) => {
 
         <div className="mt-4 flex justify-end">
           <Link to={`/taskDetails/${_id}`}>
-            <button className="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm rounded-lg hover:scale-105 transition-transform duration-200">
+            <button className="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-primary to-secondary text-sm rounded-lg hover:scale-105 transition-transform duration-200">
               <BiEdit className="text-base" />
               <span>See Details</span>
             </button>
