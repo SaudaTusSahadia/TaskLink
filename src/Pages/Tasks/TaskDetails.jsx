@@ -51,25 +51,25 @@ const handleBids = (id, email) => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="max-w-4xl mx-auto mt-10 bg-gradient-to-br from-white via-blue-50 to-purple-100 rounded-xl shadow-2xl overflow-hidden border border-gray-200"
+      className="max-w-5xl mx-auto mt-10 rounded-xl shadow-2xl overflow-hidden border-2"
     >
       <img
         src={image}
         alt="Task"
-        className="w-full h-64 object-cover rounded-t-xl"
+        className="w-full h-150 object-cover rounded-t-xl"
       />
 
       <div className="p-8 space-y-4">
         <h2 className="text-3xl font-bold text-blue-700">{taskName}</h2>
 
         <div className="flex flex-wrap gap-3 text-sm text-gray-600">
-          <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-medium">
+          <span className="bg-base-100 text-blue-600 px-3 py-1 rounded-full font-medium">
             📂 Category: {category}
           </span>
-          <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full font-medium">
+          <span className="bg-info text-green-800 px-3 py-1 rounded-full font-medium">
             💰 Budget: ₹{budget}
           </span>
-          <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full font-medium">
+          <span className="bg-base-300 text-yellow-700 px-3 py-1 rounded-full font-medium">
             📅 Deadline: {deadline?.slice(0, 10)}
           </span>
           <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
@@ -77,9 +77,9 @@ const handleBids = (id, email) => {
           </span>
         </div>
 
-        <p className="text-gray-700 leading-relaxed">{description}</p>
+        <p className="text-info leading-relaxed">{description}</p>
 
-        <div className="mt-6 grid md:grid-cols-2 gap-4 text-gray-700">
+        <div className="mt-6 grid md:grid-cols-2 gap-4 text-blue-500">
           <div>
             <p><span className="font-semibold">Submitted by:</span> {username}</p>
             <p><span className="font-semibold">User Email:</span> {email}</p>

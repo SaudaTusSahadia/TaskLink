@@ -9,11 +9,11 @@ const Support = () => {
                     <FaQuestionCircle className="text-blue-600" /> Support
                 </h1>
 
-                <p className="text-gray-700 text-center">
+                <p className=" text-center">
                     Need help or have questions? Our support team is here to assist you!
                 </p>
 
-                <ul className="space-y-4 text-gray-700">
+                <ul className="space-y-4 ">
                     <li className="flex items-center gap-2">
                         <FaEnvelope className="text-blue-500" />
                         <strong>Email:</strong>{' '}

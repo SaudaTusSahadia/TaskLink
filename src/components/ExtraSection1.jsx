@@ -1,14 +1,21 @@
+import Lottie from 'lottie-react';
 import React from 'react';
 import CountUp from 'react-countup';
 import { FaUsers, FaStar } from 'react-icons/fa';
 import { FcCustomerSupport } from 'react-icons/fc';
 import { MdOutlineSecurity } from 'react-icons/md';
+import animation from '../assets/achievements.json'
+import { GrAchievement } from 'react-icons/gr';
 
 const ExtraSection1 = () => {
     return (
         <div>
-            <h1 className='text-3xl text-center mt-5 md:mt-15 text-success font-bold'>Our Achievements</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 bg-gradient-to-tl from-base-300 via-base-200 to-base-100 my-10 py-10 px-4 rounded-xl shadow-md">
+            <h1 className='text-3xl text-center flex justify-center items-center gap-4 mt-5 md:mt-15 text-success font-bold'>Our Achievements <GrAchievement /></h1>
+            <div className='flex justify-center items-center'>
+                <Lottie animationData={animation} className='w-50 mt-3'></Lottie>
+            </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 bg-gradient-to-tl from-base-300 via-base-200 to-base-100 my-5 md:mb-10 py-10 px-4 rounded-xl shadow-md">
 
             {/* Users Daily */}
             <div className="flex items-center gap-4 p-4 bg-accent rounded-lg shadow hover:shadow-lg transition duration-300">

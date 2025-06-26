@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import BrowseSingleTask from './BrowseSingleTask'
+import Loading from '../../components/Loading'
 
 const BrowseTasks = () => {
 
@@ -16,8 +17,9 @@ const BrowseTasks = () => {
 
 
     return (
-        <div>
-            <div className='grid md:grid-cols-2 grid-cols-1 gap-6'>
+        <div className='mt-5 md:mt-15'>
+            <Suspense fallback={<Loading/>}>
+            <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-2 md:gap-3 lg:gap-6'>
                 {
                     tasks.map(task=><BrowseSingleTask 
                         key={task._id}
@@ -26,6 +28,7 @@ const BrowseTasks = () => {
                         task={task}></BrowseSingleTask>)
                 }
             </div>
+            </Suspense>
         </div>
     );
 };

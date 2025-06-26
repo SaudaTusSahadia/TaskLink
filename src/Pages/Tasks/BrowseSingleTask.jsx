@@ -1,44 +1,38 @@
 import React from "react";
 import { BiDetail } from "react-icons/bi";
-import { Link } from "react-router";
+import { Link } from "react-router"; 
+import { motion } from "framer-motion";
 
 const FeaturedTasks = ({ task }) => {
-  const { _id, taskName, category, budget, deadline, image } = task;
+  const { _id, taskName, description, image } = task;
 
   return (
-    <div className="card shadow-md hover:shadow-xl border-2  transition duration-300 rounded-xl overflow-hidden">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      whileHover={{ scale: 1.03, boxShadow: "0px 10px 20px rgba(0,0,0,0.15)" }}
+      transition={{ duration: 1 }}
+      className="rounded-lg overflow-hidden border-2 border-secondary bg-gradient-to-tl from-base-300 via-info to-succes shadow-xl hover:shadow-md transition-all duration-300"
+    >
       <img
         src={image}
         alt={taskName}
-        className="w-full h-48 object-cover"
+        className="w-full h-48 object-cover px-2 pt-2 rounded"
       />
 
-      <div className="card-body p-5 text-center space-y-3">
-        <h2 className="text-xl font-semibold  ">{taskName}</h2>
-
-        <p className="text-sm ">
-          <span className="font-medium">Category:</span> {category}
-        </p>
-
-        <div className="flex justify-around items-center">
-          <p className="text-base font-semibold text-green-600 dark:text-green-400">
-          Budget: ₹{budget}
-        </p>
-
-        <p className="text-sm text-blue-600 dark:text-blue-400">
-          Deadline: {deadline?.slice(0, 10)}
-        </p>
-        </div>
+      <div className="p-5 text-center space-y-3">
+        <h2 className="text-xl font-semibold ">{taskName}</h2>
+        <p className="text-sm">{description}</p>
 
         <div className="pt-2">
           <Link to={`/taskDetails/${_id}`}>
-            <button className="btn btn-outline btn-primary btn-sm w-full">
-              <BiDetail size={20}></BiDetail> See Details
+            <button className="btn btn-primary w-full flex items-center justify-center gap-2 text-white font-semibold hover:bg-blue-700 transition rounded-lg">
+              <BiDetail size={20} /> See Details
             </button>
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

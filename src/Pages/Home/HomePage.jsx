@@ -27,7 +27,7 @@ const HomePage = () => {
             <Slider></Slider>
             <ExtraSection1></ExtraSection1>
             <h1 className='flex justify-center items-center gap-5 text-center text-3xl font-bold text-blue-500 my-5 md:mt-15'><Lottie className='h-15' animationData={feature} />Featured Tasks</h1>
-            <div className='grid md:grid-cols-2 grid-cols-1 gap-6'>
+            <div className='grid md:grid-cols-2 grid-cols-1 gap-2'>
                 {
                     tasks.map(task=><FeaturedTasks 
                         key={task._id}
