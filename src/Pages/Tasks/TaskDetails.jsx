@@ -51,7 +51,7 @@ const handleBids = (id, email) => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="max-w-5xl mx-auto mt-10 rounded-xl shadow-2xl overflow-hidden border-2"
+      className="max-w-5xl mx-auto my-5 md:my-10 rounded-xl shadow-2xl overflow-hidden border-2"
     >
       <img
         src={image}

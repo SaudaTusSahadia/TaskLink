@@ -3,21 +3,26 @@ import img from '../assets/5.jpeg';
 
 const Extrasection5 = () => {
     return (
-        <section
-            className="relative bg-cover bg-center bg-no-repeat py-20 px-4 md:px-8 md:top-10 md:mb-10"
-            style={{
-                backgroundImage: `url(${img})`,
-            }}
-        >
+        <div className="relative rounded-xl overflow-hidden px-4 py-20 md:px-8 md:mt-16">
+            {/* Background Image */}
+            <img
+                src={img}
+                alt="background"
+                className="absolute inset-0 w-full h-full object-cover z-0"
+            />
             {/* Overlay */}
-            <div className="absolute inset-0  bg-opacity-60"></div>
+            <div
+                className="absolute inset-0 z-10"
+                style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+            ></div>
+
 
             {/* Content */}
-            <div className="relative z-10 max-w-3xl mx-auto text-center ">
-                <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black">
+            <div className="relative z-20 max-w-3xl mx-auto text-center text-white">
+                <h2 className="text-4xl md:text-5xl font-bold mb-4">
                     Stay Updated with TaskLink
                 </h2>
-                <p className="text-lg text-gray-600  mb-8">
+                <p className="text-lg text-gray-200 mb-8">
                     Subscribe to get the latest freelance tasks, project updates, and platform announcements directly in your inbox.
                 </p>
 
@@ -26,17 +31,17 @@ const Extrasection5 = () => {
                     <input
                         type="email"
                         placeholder="Enter your email"
-                        className="w-full sm:w-2/3 px-5 py-3 rounded-xl focus:outline-base-300 outline-1"
+                        className="w-full sm:w-2/3 px-5 py-3 rounded-xl outline-2 text-gray-400"
                     />
                     <button
                         type="submit"
-                        className="bg-gradient-to-r from-info to-success  px-6 py-3 rounded-xl font-semibold hover:scale-105 transition"
+                        className="bg-gradient-to-r from-info to-success px-6 py-3 rounded-xl font-semibold hover:scale-105 transition"
                     >
                         Subscribe
                     </button>
                 </form>
             </div>
-        </section>
+        </div>
     );
 };
 

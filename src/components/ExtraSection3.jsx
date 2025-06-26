@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { CheckSquare } from 'lucide-react'; 
 import img1 from '../assets/e3.jpeg';
 import img2 from '../assets/E32.jpeg';
+import { Link } from 'react-router';
 
 const ExtraSection3 = () => {
   return (
@@ -27,6 +28,7 @@ const ExtraSection3 = () => {
           <p className="text-lg mb-6 leading-relaxed text-gray-500">
             TaskLink helps you stay ahead of your schedule by organizing your workflow into manageable pieces. From personal to professional projects, keep everything on track in one place.
           </p>
+          <Link to="/browseTask">
           <motion.button
             whileHover={{ scale: 1.05 }}
             animate={{
@@ -37,6 +39,7 @@ const ExtraSection3 = () => {
           >
             Explore Features
           </motion.button>
+          </Link>
         </motion.div>
 
         {/* Image Section */}

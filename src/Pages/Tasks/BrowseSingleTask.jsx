@@ -12,7 +12,7 @@ const FeaturedTasks = ({ task }) => {
       animate={{ opacity: 1, scale: 1 }}
       whileHover={{ scale: 1.03, boxShadow: "0px 10px 20px rgba(0,0,0,0.15)" }}
       transition={{ duration: 1 }}
-      className="rounded-lg overflow-hidden border-2 border-secondary bg-gradient-to-tl from-base-300 via-info to-succes shadow-xl hover:shadow-md transition-all duration-300"
+      className="rounded-lg overflow-hidden border-2 border-secondary bg-gradient-to-l from-base-300 to-base-200 shadow-xl hover:shadow-md transition-all duration-300"
     >
       <img
         src={image}
