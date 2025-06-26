@@ -3,7 +3,7 @@ import React from 'react';
 const TermsAndConditions = () => {
     return (
         <div>
-            <div className="card max-w-screen bg-base-100 shadow-sm mt-5 md:mt-20">
+            <div className="card max-w-screen bg-base-100 shadow-sm my-5 md:my-20">
                 <div className="card-body">
                     <div className="flex justify-between">
                         <h2 className="text-xl font-bold">

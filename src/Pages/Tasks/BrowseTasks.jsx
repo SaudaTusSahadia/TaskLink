@@ -17,7 +17,7 @@ const BrowseTasks = () => {
 
 
     return (
-        <div className='mt-5 md:mt-15'>
+        <div className='my-5 md:my-10'>
             <Suspense fallback={<Loading/>}>
             <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-2 md:gap-3 lg:gap-6'>
                 {

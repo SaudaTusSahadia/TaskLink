@@ -26,6 +26,8 @@ import { ThemeProvider } from './Provider/ThemeProvider.jsx';
 import MyProfile from './Pages/Auth/MyProfile.jsx';
 import AboutUs from './components/AboutUs.jsx';
 import Support from './components/Support.jsx';
+import FindFreelancer from './components/FindFreelancer.jsx';
+import ContactUs from './components/ContactUs.jsx';
 // =======
 // >>>>>>> 39ef2e6651c87e142add5b434abddb22148a58f0
 
@@ -80,6 +82,14 @@ const router = createBrowserRouter([
       {
         path: "/support",
         Component: Support
+      },
+      {
+        path: "/freelancers",
+        Component: FindFreelancer
+      },
+      {
+        path: "/contact",
+        Component: ContactUs
       }
     ]
   },
