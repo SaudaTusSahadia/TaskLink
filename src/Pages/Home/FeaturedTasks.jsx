@@ -8,7 +8,7 @@ import { CgDetailsMore } from "react-icons/cg";
 const FeaturedTasks = ({ task }) => {
   const { _id, taskName, description, image } = task;
   return (
-    <div className="card bg-base-100 image-full shadow-sm">
+    <div className="card bg-base-100 image-full shadow-sm m-3">
       <figure>
         <img
           src={image}

@@ -26,7 +26,7 @@ const Slider = () => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]} 
-        className="w-full h-110" 
+        className="w-full h-90" 
       >
         <SwiperSlide>
           <img src={firstPic} alt="Slide 1" className="w-full h-full object-cover rounded-lg" />

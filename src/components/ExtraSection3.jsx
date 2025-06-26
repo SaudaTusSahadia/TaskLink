@@ -7,15 +7,15 @@ import img2 from '../assets/E32.jpeg';
 const ExtraSection3 = () => {
   return (
     <motion.section
-      className="w-full py-16"
+      className="w-full py-16 mt-5 md:mt-10"
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="px-6 flex flex-col-reverse lg:flex-row items-center gap-12">
+      <div className="px-6 flex flex-col lg:flex-row items-center gap-12">
         {/* Text Content */}
         <motion.div
-          className="lg:w-1/2"
+          className="lg:w-1/2 mb-10"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2 }}
@@ -48,7 +48,7 @@ const ExtraSection3 = () => {
         >
           <motion.img
             src={img1}
-            animate={{ y: [-50, -100, -50] }}
+            animate={{ y: [-10, -50, -10] }}
             transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
             alt="Task Preview"
             className="rounded-2xl shadow-xl object-cover h-70 w-100"
@@ -56,10 +56,10 @@ const ExtraSection3 = () => {
           />
           <motion.img
             src={img2}
-            animate={{ x: [90, 250, 90] }}
+            animate={{ x: [100, 250, 100] }}
             transition={{ duration: 25, delay:1, repeat: Infinity, ease: 'easeInOut' }}
             alt="Workflow Visual"
-            className="rounded-2xl shadow-xl object-cover h-70 w-90 absolute"
+            className="rounded-2xl shadow-xl object-cover h-70 w-90 absolute hidden md:block"
             whileHover={{ scale: 1.03 }}
           />
         </motion.div>

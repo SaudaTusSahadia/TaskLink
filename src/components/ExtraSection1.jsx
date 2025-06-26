@@ -22,7 +22,7 @@ const ExtraSection1 = () => {
                 <FaUsers className="text-blue-600" size={40} />
                 <div>
                     <h1 className="text-3xl font-bold text-gray-800">
-                        <CountUp start={5000} end={10000} duration={20} />+
+                        <CountUp start={1000} end={10000} duration={100} />+
                     </h1>
                     <p className="text-gray-600">Users Daily</p>
                 </div>
@@ -33,7 +33,7 @@ const ExtraSection1 = () => {
                 <FaStar className="text-yellow-400" size={35} />
                 <div>
                     <h1 className="text-3xl font-bold text-gray-800">
-                        <CountUp start={30000} end={50000} duration={20} />+
+                        <CountUp start={3000} end={50000} duration={100} />+
                     </h1>
                     <p className="text-gray-600">Talents</p>
                 </div>
