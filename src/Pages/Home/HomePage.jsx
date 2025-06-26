@@ -7,6 +7,7 @@ import feature from '../../assets/Animation - 1747895711054.json'
 import Lottie from 'lottie-react';
 import Slider from '../../components/Slider';
 import { ToastContainer } from 'react-toastify';
+import ExtraSection3 from '../../components/ExtraSection3';
 
 const HomePage = () => {
     
@@ -37,6 +38,7 @@ const HomePage = () => {
                 }
             </div>
             <ExtraSection2></ExtraSection2>
+            <ExtraSection3/>
         </div>
     );
 };
