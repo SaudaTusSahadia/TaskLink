@@ -10,7 +10,7 @@ import { GrAchievement } from 'react-icons/gr';
 const ExtraSection1 = () => {
     return (
         <div>
-            <h1 className='text-3xl text-center flex justify-center items-center gap-4 mt-5 md:mt-15 text-success font-bold'>Our Achievements <GrAchievement /></h1>
+            <h1 className='text-4xl text-center flex justify-center items-center gap-4 mt-5 md:mt-15 text-success font-bold'>Our Achievements <GrAchievement /></h1>
             <div className='flex justify-center items-center'>
                 <Lottie animationData={animation} className='w-50 mt-3'></Lottie>
             </div>

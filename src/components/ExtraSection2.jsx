@@ -9,16 +9,15 @@ const ExtraSection2 = () => {
         <div className='my-10 md:my-20 text-center'>
             <div className="text-center mb-10">
                 <h1 className="flex justify-center items-center gap-6 text-4xl md:text-5xl font-extrabold mb-3 tracking-tight">
-                    <Lottie className='h-20' animationData={groovyWalkAnimation} />Job Practice
-                </h1>
-                <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto text-center leading-relaxed">
+                    <Lottie className='h-20' animationData={groovyWalkAnimation} />
+                    {/* Job Practice */}
                     <Typewriter
                         words={[
-                            'Learn the Essentials',
-                            'Practice with Purpose',
-                            'Grow with Confidence',
-                            'Master Real-World Skills',
-                            'Level Up Your Career',
+                            'Job Practice',
+                            'Typing',
+                            'Data Entry',
+                            'Prof reading',
+                            'Writing',
                         ]}
                         loop={false}
                         cursor
@@ -27,7 +26,10 @@ const ExtraSection2 = () => {
                         deleteSpeed={50}
                         delaySpeed={1000}
                     />{' '}
-                    through hands-on, industry-relevant exercises designed to refine your abilities, solidify your understanding, and empower you to succeed in the modern tech landscape.
+                </h1>
+                <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto text-center leading-relaxed">
+                    
+                    Learn the Essentials through hands-on, industry-relevant exercises designed to refine your abilities, solidify your understanding, and empower you to succeed in the modern tech landscape.
                 </p>
             </div>
 
@@ -35,17 +37,17 @@ const ExtraSection2 = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 p-6">
 
                 {/* Typing Card */}
-                <div className="card bg-gradient-to-br from-blue-200 to-white shadow-lg rounded-2xl hover:scale-105 transition-transform duration-300">
+                <div className="card bg-gradient-to-br from-info to-base-100 shadow-lg rounded-2xl hover:scale-105 transition-transform duration-300">
                     <figure className="pt-8">
-                        <FaKeyboard className="text-5xl text-blue-600" />
+                        <FaKeyboard className="text-5xl text-blue-800" />
                     </figure>
                     <div className="card-body items-center text-center">
-                        <h2 className="card-title text-2xl text-gray-800">Typing</h2>
-                        <p className="text-gray-600">
+                        <h2 className="card-title text-2xl text-gray-950">Typing</h2>
+                        <p className="text-purple-500">
                             Boost your typing speed and accuracy with our interactive platform. Practice regularly and see real-time progress.
                         </p>
                         <div className="card-actions mt-4">
-                            <button className="btn btn-primary gap-2">
+                            <button className="btn btn-outline text-info gap-2">
                                 Start Now <FaArrowAltCircleRight />
                             </button>
                         </div>
@@ -53,17 +55,17 @@ const ExtraSection2 = () => {
                 </div>
 
                 {/* Data Entry Card */}
-                <div className="card bg-gradient-to-br from-green-100 to-white shadow-lg rounded-2xl hover:scale-105 transition-transform duration-300">
+                <div className="card bg-gradient-to-br from-success to-base-100 shadow-lg rounded-2xl hover:scale-105 transition-transform duration-300">
                     <figure className="pt-8">
-                        <FaDatabase className="text-5xl text-green-600" />
+                        <FaDatabase className="text-5xl text-green-800" />
                     </figure>
                     <div className="card-body items-center text-center">
-                        <h2 className="card-title text-2xl text-gray-800">Data Entry</h2>
-                        <p className="text-gray-600">
+                        <h2 className="card-title text-2xl text-gray-950">Data Entry</h2>
+                        <p className="text-green-500">
                             Master data entry skills with hands-on tasks that improve attention to detail, speed, and data accuracy.
                         </p>
                         <div className="card-actions mt-4">
-                            <button className="btn btn-primary gap-2">
+                            <button className="btn btn-outline text-success gap-2">
                                 Start Now <FaArrowAltCircleRight />
                             </button>
                         </div>
@@ -71,17 +73,17 @@ const ExtraSection2 = () => {
                 </div>
 
                 {/* Proofreading Card */}
-                <div className="card bg-gradient-to-br from-yellow-100 to-white shadow-lg rounded-2xl hover:scale-105 transition-transform duration-300">
+                <div className="card bg-gradient-to-br from-warning to-base-100 shadow-lg rounded-2xl hover:scale-105 transition-transform duration-300">
                     <figure className="pt-8">
-                        <FaSpellCheck className="text-5xl text-yellow-600" />
+                        <FaSpellCheck className="text-5xl text-yellow-800" />
                     </figure>
                     <div className="card-body items-center text-center">
-                        <h2 className="card-title text-2xl text-gray-800">Proofreading</h2>
-                        <p className="text-gray-600">
+                        <h2 className="card-title text-2xl text-gray-950">Proofreading</h2>
+                        <p className="text-amber-500">
                             Enhance your proofreading abilities by spotting and correcting grammar, spelling, and punctuation errors with ease.
                         </p>
                         <div className="card-actions mt-4">
-                            <button className="btn btn-primary gap-2">
+                            <button className="btn btn-outline text-warning gap-2">
                                 Start Now <FaArrowAltCircleRight />
                             </button>
                         </div>
@@ -89,17 +91,17 @@ const ExtraSection2 = () => {
                 </div>
 
                 {/* Writing Card */}
-                <div className="card bg-gradient-to-br from-pink-100 to-white shadow-lg rounded-2xl hover:scale-105 transition-transform duration-300">
+                <div className="card bg-gradient-to-br from-secondary to-base-100 shadow-lg rounded-2xl hover:scale-105 transition-transform duration-300">
                     <figure className="pt-8">
-                        <FaPenFancy className="text-5xl text-pink-600" />
+                        <FaPenFancy className="text-5xl text-pink-800" />
                     </figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title text-2xl text-gray-800">Writing</h2>
-                        <p className="text-gray-600">
+                        <p className="text-pink-500">
                             Unleash your creativity and polish your writing skills with prompts, story-building tools, and feedback practice.
                         </p>
                         <div className="card-actions mt-4">
-                            <button className="btn btn-primary gap-2">
+                            <button className="btn btn-outline text-secondary gap-2">
                                 Start Now <FaArrowAltCircleRight />
                             </button>
                         </div>
