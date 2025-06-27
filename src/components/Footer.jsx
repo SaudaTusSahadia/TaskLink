@@ -5,7 +5,7 @@ import logo from '../assets/icons8-laptop-50.png';
 
 const Footer = () => {
   return (
-    <footer className="bg-base-300 px-6 md:px-16 py-12">
+    <footer className="bg-base-200 px-6 md:px-16 py-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
 
         {/* Logo and About */}
