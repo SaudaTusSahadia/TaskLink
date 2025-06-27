@@ -43,7 +43,6 @@ const router = createBrowserRouter([
         loader: () => fetch('https://assignment10-server-silk.vercel.app/tasks'),
         Component: HomePage
       },
-
       {
         path: "/browseTask",
         loader: () => fetch('https://assignment10-server-silk.vercel.app/tasks'),
@@ -54,13 +53,6 @@ const router = createBrowserRouter([
         loader: ({ params }) => fetch(`https://assignment10-server-silk.vercel.app/tasks/${params.id}`),
         element: <PrivateRoute><TaskDetails></TaskDetails></PrivateRoute>
       },
-      {
-        path: "/updateTask/:id",
-        loader: ({ params }) => fetch(`https://assignment10-server-silk.vercel.app/tasks/${params.id}`),
-        element: <PrivateRoute><UpdateTask></UpdateTask></PrivateRoute>
-      },
-
-
       {
         path: "/t&q",
         Component: TermsAndConditions
@@ -102,6 +94,11 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/postedTask",
         element: <PrivateRoute><MyTasks></MyTasks></PrivateRoute>
+      },
+      {
+        path: "/dashboard/updateTask/:id",
+        loader: ({ params }) => fetch(`https://assignment10-server-silk.vercel.app/tasks/${params.id}`),
+        element: <PrivateRoute><UpdateTask></UpdateTask></PrivateRoute>
       }
     ]
   },

@@ -77,7 +77,7 @@ const MyTasks = () => {
                     <td className="px-4 py-3">
                       <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
                         <Link
-                          to={`/updateTask/${task._id}`}
+                          to={`/dashboard/updateTask/${task._id}`}
                           className="flex items-center px-3 py-1 bg-blue-500 rounded hover:bg-blue-600 transition"
                         >
                           <MdEdit className="mr-1" /> Update

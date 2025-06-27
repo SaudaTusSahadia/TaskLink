@@ -51,7 +51,7 @@ const DashBoardLayout = () => {
             <div className="flex flex-1 mt-16 min-h-screen">
                 {/* Sidebar */}
                 {open && (
-                    <aside className="w-76  min-h-screen bg-base-200 shadow-md hidden md:flex flex-col justify-start p-4 ">
+                    <aside className="w-88  min-h-screen bg-base-200 shadow-md hidden md:flex flex-col justify-start p-4 ">
                         {/* User Info */}
                         <div className="flex items-center gap-4 mb-6">
                             {user?.photoURL ? (

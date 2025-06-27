@@ -9,16 +9,7 @@ import { IoMoon } from "react-icons/io5";
 import { BsFillSunFill, BsMoonStars } from "react-icons/bs";
 
 const Header = () => {
-  const { user, logOut } = use(AuthContext);
-  const handleLogout = () => {
-    logOut()
-      .then(() => {
-        alert("user logged out successfully");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+  const { user } = use(AuthContext);
 
   const links = (
     <>
@@ -37,7 +28,7 @@ const Header = () => {
           </li>
         </>
       )}
-      
+
       <li>
         <NavLink to="/aboutUs">About us</NavLink>
       </li>
@@ -50,12 +41,26 @@ const Header = () => {
   return (
     <div>
       {/* for dynamic title  */}
-      <title>Home | TaskLink</title>
       <div className="navbar bg-base-200 shadow-sm fixed top-0 left-0 z-50">
 
         <div className="navbar-start">
+          
+          <div className="text-xl flex justify-center items-center gap-1 ml-8">
+            <img className="w-10 hidden sm:block" src={logo} alt="" />
+            <p className="font-bold hidden sm:block">
+              Task<span className="text-primary">Link</span>
+            </p>
+          </div>
+        </div>
+
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal font-semibold px-1">{links}</ul>
+        </div>
+        <div className="navbar-end flex items-center gap-4 pr-4">
+
+          {/*sm and md links */}
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -79,18 +84,7 @@ const Header = () => {
               {links}
             </ul>
           </div>
-          <div className="text-xl flex justify-center items-center gap-1 ml-8">
-            <img className="w-10 hidden sm:block" src={logo} alt="" />
-            <p className="font-bold hidden sm:block">
-              Task<span className="text-primary">Link</span>
-            </p>
-          </div>
-        </div>
 
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal font-semibold px-1">{links}</ul>
-        </div>
-        <div className="navbar-end flex items-center gap-4 pr-4">
           {/* Theme Toggle Button */}
           <label className="swap swap-rotate">
             {/* this hidden checkbox controls the state */}
@@ -149,13 +143,7 @@ const Header = () => {
                   alt="user"
                 />
               </div>
-            ) : (
-              <FaUserCircle
-                size={36}
-                className="text-blue-600"
-                title={user?.displayName || "Guest"}
-              />
-            )}
+            ) : ""}
           </div>
         </div>
       </div>

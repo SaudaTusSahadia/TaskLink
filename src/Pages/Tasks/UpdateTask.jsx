@@ -152,7 +152,7 @@ const UpdateTask = () => {
                 type="email"
                 name="email"
                 readOnly
-                className="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg shadow-sm"
+                className="w-full px-4 py-3  border border-gray-300 rounded-lg shadow-sm"
                 title="Beginner level: Auto-filled email (read-only)"
               />
             </div>
@@ -167,7 +167,7 @@ const UpdateTask = () => {
                 type="text"
                 name="username"
                 readOnly
-                className="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg shadow-sm"
+                className="w-full px-4 py-3  border border-gray-300 rounded-lg shadow-sm"
                 title="Beginner level: Auto-filled name (read-only)"
               />
             </div>
