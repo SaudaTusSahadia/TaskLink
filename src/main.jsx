@@ -21,7 +21,6 @@ import ForgetPassword from './Pages/Auth/ForgetPassword.jsx'
 import PrivateRoute from './Provider/PrivateRoute.jsx';
 import BrowseTasks from './Pages/Tasks/BrowseTasks.jsx';
 import MyTasks from './Pages/Tasks/MyTasks.jsx';
-// <<<<<<< HEAD
 import { ThemeProvider } from './Provider/ThemeProvider.jsx';
 import MyProfile from './Pages/Auth/MyProfile.jsx';
 import AboutUs from './components/AboutUs.jsx';
@@ -30,8 +29,6 @@ import FindFreelancer from './components/FindFreelancer.jsx';
 import ContactUs from './components/ContactUs.jsx';
 import DashBoardLayout from './Layouts/DashBoardLayout.jsx';
 import Dashboard from './Pages/Tasks/Dashboard.jsx';
-// =======
-// >>>>>>> 39ef2e6651c87e142add5b434abddb22148a58f0
 
 const router = createBrowserRouter([
   {
@@ -77,11 +74,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    Component: DashBoardLayout,
+    element: <PrivateRoute><DashBoardLayout/></PrivateRoute>,
     children: [
       {
         path: "/dashboard",
-        Component: Dashboard
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
       },
       {
         path: "/dashboard/MyProfile",

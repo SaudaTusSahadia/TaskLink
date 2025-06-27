@@ -81,10 +81,10 @@ const AddTasks = () => {
   };
 
   return (
-    <div className="min-h-screen  p-6">
+    <div className="min-h-screen  md:p-6">
       <title>Add Task | TaskLink</title>
 
-      <div className="max-w-4xl mx-auto border-2 p-8 rounded-2xl shadow-2xl">
+      <div className="max-w-4xl mx-auto border-2 md:p-8 p-2 rounded-2xl shadow-2xl">
         <div className="text-center mb-10">
           <h1 className="text-3xl font-extrabold text-blue-600 bg-clip-text  flex justify-center items-center gap-3">
             <Lottie animationData={add} className="h-12" /> Add New Task
