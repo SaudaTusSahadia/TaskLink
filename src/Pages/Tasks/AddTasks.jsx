@@ -17,24 +17,6 @@ import Lottie from "lottie-react";
 import add from "../../assets/Animation - 1747916551008.json";
 import { AuthContext } from "../../Provider/AuthProvider";
 
-// const AddTasks = () => {
-//   const { user } = useContext(AuthContext);
-
-//   const handleAddTask = (e) => {
-//     e.preventDefault();
-//     const form = e.target;
-//     const formData = new FormData(form);
-//     const newTask = Object.fromEntries(formData.entries());
-// // =======
-// import React, { useContext } from 'react';
-// import { BiArrowBack } from 'react-icons/bi';
-// import { FaEnvelope, FaUserAlt } from 'react-icons/fa';
-// import { MdTaskAlt, MdCategory, MdDescription, MdDateRange, MdAttachMoney, MdImage } from 'react-icons/md';
-// import { Link } from 'react-router'; 
-// import Swal from 'sweetalert2';
-// import Lottie from 'lottie-react';
-// import add from '../../assets/Animation - 1747916551008.json';
-// import { AuthContext } from '../../Provider/AuthProvider';
 
 const AddTasks = () => {
 
@@ -70,7 +52,6 @@ const AddTasks = () => {
                     });
                 }
             });
-// >>>>>>> 39ef2e6651c87e142add5b434abddb22148a58f0
 
     newTask.bids = 0;
 
@@ -102,15 +83,6 @@ const AddTasks = () => {
   return (
     <div className="min-h-screen  p-6">
       <title>Add Task | TaskLink</title>
-
-      <div className="mb-6">
-        <Link
-          to="/"
-          className="flex items-center gap-2 text-lg text-blue-600 hover:text-blue-800 transition-all"
-        >
-          <BiArrowBack className="text-xl" /> Go Back to Home
-        </Link>
-      </div>
 
       <div className="max-w-4xl mx-auto border-2 p-8 rounded-2xl shadow-2xl">
         <div className="text-center mb-10">

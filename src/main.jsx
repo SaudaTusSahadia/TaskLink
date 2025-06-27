@@ -28,6 +28,8 @@ import AboutUs from './components/AboutUs.jsx';
 import Support from './components/Support.jsx';
 import FindFreelancer from './components/FindFreelancer.jsx';
 import ContactUs from './components/ContactUs.jsx';
+import DashBoardLayout from './Layouts/DashBoardLayout.jsx';
+import Dashboard from './Pages/Tasks/Dashboard.jsx';
 // =======
 // >>>>>>> 39ef2e6651c87e142add5b434abddb22148a58f0
 
@@ -41,10 +43,7 @@ const router = createBrowserRouter([
         loader: () => fetch('https://assignment10-server-silk.vercel.app/tasks'),
         Component: HomePage
       },
-      {
-        path: "/addTask",
-        element: <PrivateRoute><AddTasks></AddTasks></PrivateRoute>
-      },
+
       {
         path: "/browseTask",
         loader: () => fetch('https://assignment10-server-silk.vercel.app/tasks'),
@@ -60,23 +59,14 @@ const router = createBrowserRouter([
         loader: ({ params }) => fetch(`https://assignment10-server-silk.vercel.app/tasks/${params.id}`),
         element: <PrivateRoute><UpdateTask></UpdateTask></PrivateRoute>
       },
+
+
       {
-        path: "/postedTask",
-        element: <PrivateRoute><MyTasks></MyTasks></PrivateRoute>
-      },
-      {
-// <<<<<<< HEAD
-        path: "/MyProfile",
-        element: <PrivateRoute><MyProfile></MyProfile></PrivateRoute>
-      },
-      {
-// =======
-// >>>>>>> 39ef2e6651c87e142add5b434abddb22148a58f0
         path: "/t&q",
         Component: TermsAndConditions
       },
       {
-        path:"/aboutUs",
+        path: "/aboutUs",
         Component: AboutUs
       },
       {
@@ -90,6 +80,28 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         Component: ContactUs
+      }
+    ]
+  },
+  {
+    path: "/dashboard",
+    Component: DashBoardLayout,
+    children: [
+      {
+        path: "/dashboard",
+        Component: Dashboard
+      },
+      {
+        path: "/dashboard/MyProfile",
+        element: <PrivateRoute><MyProfile></MyProfile></PrivateRoute>
+      },
+      {
+        path: "/dashboard/addTask",
+        element: <PrivateRoute><AddTasks></AddTasks></PrivateRoute>
+      },
+      {
+        path: "/dashboard/postedTask",
+        element: <PrivateRoute><MyTasks></MyTasks></PrivateRoute>
       }
     ]
   },
@@ -120,11 +132,11 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <ThemeProvider>
-      <StrictMode>
-    <AuthProvider>
-      <RouterProvider router={router} />
-    </AuthProvider>
-  </StrictMode>
+    <StrictMode>
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
+    </StrictMode>
   </ThemeProvider>
 
 )

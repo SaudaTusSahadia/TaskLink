@@ -7,7 +7,7 @@ import Slider from '../components/Slider';
 
 const MainLayout = () => {
     return (
-        <div className='bg-gradient-to-br from-base-300 via-base-200 to-info'>
+        <div>
             <Header></Header>
             
             <div className='md:max-w-7xl mx-auto pt-16'>

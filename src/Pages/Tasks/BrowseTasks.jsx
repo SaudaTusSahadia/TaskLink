@@ -11,7 +11,8 @@ const BrowseTasks = () => {
 
   // Fetch tasks based on search & sort
   useEffect(() => {
-    fetch(`http://localhost:3000/tasksAll?sort=${sortOrder}&search=${searchTerm}`)
+    fetch(`https://assignment10-server-silk.vercel.app/tasksAll?sort=${sortOrder}&search=${searchTerm}`)
+    // fetch(`http://localhost:3000/tasksAll?sort=${sortOrder}&search=${searchTerm}`)
       .then((res) => res.json())
       .then((data) => setTasks(data))
       .catch((error) => console.error("Error fetching tasks:", error));

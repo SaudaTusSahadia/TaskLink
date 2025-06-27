@@ -10,7 +10,6 @@ import { BsFillSunFill, BsMoonStars } from "react-icons/bs";
 
 const Header = () => {
   const { user, logOut } = use(AuthContext);
-  // const { theme, toggleTheme } = use(ThemeContext);
   const handleLogout = () => {
     logOut()
       .then(() => {
@@ -34,13 +33,7 @@ const Header = () => {
       {user && (
         <>
           <li>
-            <NavLink to="/addTask">Add Task</NavLink>
-          </li>
-          <li>
-            <NavLink to="/MyProfile">MyProfile</NavLink>
-          </li>
-          <li>
-            <NavLink to="/postedTask">My Posted Task</NavLink>
+            <NavLink to="/dashboard">Dashboard</NavLink>
           </li>
         </>
       )}
@@ -86,12 +79,12 @@ const Header = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">
+          <div className="text-xl flex justify-center items-center gap-1 ml-8">
             <img className="w-10 hidden sm:block" src={logo} alt="" />
             <p className="font-bold hidden sm:block">
               Task<span className="text-primary">Link</span>
             </p>
-          </a>
+          </div>
         </div>
 
         <div className="navbar-center hidden lg:flex">
@@ -124,12 +117,7 @@ const Header = () => {
 
 
           {user ? (
-            <button
-              onClick={handleLogout}
-              className="btn btn-outline text-blue-600 hover:text-white hover:bg-blue-500 transition duration-300"
-            >
-              Log Out
-            </button>
+            ''
           ) : (
             <Link
               to="/auth/login"
@@ -151,7 +139,7 @@ const Header = () => {
             </Link>
           )}
 
-          <div className="relative group">
+          <div className="relative group mr-4">
 
             {user && user.photoURL ? (
               <div className="tooltip tooltip-left" data-tip={user.displayName}>
