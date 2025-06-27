@@ -63,7 +63,7 @@ const handleBids = (id, email) => {
         <h2 className="text-3xl font-bold text-blue-700">{taskName}</h2>
 
         <div className="flex flex-wrap gap-3 text-sm text-gray-600">
-          <span className="bg-base-100 text-blue-600 px-3 py-1 rounded-full font-medium">
+          <span className="bg-blue-200 text-blue-600 px-3 py-1 rounded-full font-medium">
             📂 Category: {category}
           </span>
           <span className="bg-info text-green-800 px-3 py-1 rounded-full font-medium">

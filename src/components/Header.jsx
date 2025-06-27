@@ -55,7 +55,7 @@ const Header = () => {
           <div className="flex items-center gap-4">
             {/* Theme Toggle */}
             <label className="swap swap-rotate">
-              <input type="checkbox" className="theme-controller" value="light" />
+              <input type="checkbox" className="theme-controller" value="light"/>
               <BsMoonStarsFill className="swap-on fill-current text-xl" />
               <BsSunFill className="swap-off fill-current text-xl" />
             </label>

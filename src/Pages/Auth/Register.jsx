@@ -71,28 +71,28 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-white px-4 py-12">
+    <div className="min-h-screen flex items-center justify-center px-4 py-12">
       <title>Register | TaskLink</title>
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="bg-white shadow-2xl rounded-3xl border border-blue-300 w-full max-w-5xl flex flex-col md:flex-row overflow-hidden"
+        className="shadow-2xl rounded-3xl border border-blue-300 w-full max-w-5xl flex flex-col md:flex-row overflow-hidden"
       >
         {/* Animation Section */}
-        <div className="md:w-1/2 bg-blue-100 flex items-center justify-center p-8">
+        <div className="md:w-1/2  flex items-center justify-center p-8">
           <Lottie animationData={animation} loop={true} className="w-full max-w-xs md:max-w-md" />
         </div>
 
         {/* Form Section */}
         <div className="md:w-1/2 p-8">
           <h1 className="text-2xl font-bold text-center text-blue-600 mb-2">Create Your Account</h1>
-          <p className="text-center text-sm text-gray-600 mb-6">Join TaskLink today</p>
+          <p className="text-center text-sm text-gray-500 mb-6">Join TaskLink today</p>
 
           <form onSubmit={handleRegister} className="space-y-4">
             <div>
-              <label className="text-sm font-medium text-gray-700">Full Name</label>
+              <label className="text-sm font-medium">Full Name</label>
               <input
                 name="name"
                 type="text"
@@ -103,7 +103,7 @@ const Register = () => {
             </div>
 
             <div>
-              <label className="text-sm font-medium text-gray-700">Photo URL</label>
+              <label className="text-sm font-medium">Photo URL</label>
               <input
                 name="photo"
                 type="text"
@@ -114,7 +114,7 @@ const Register = () => {
             </div>
 
             <div>
-              <label className="text-sm font-medium text-gray-700">Email Address</label>
+              <label className="text-sm font-medium">Email Address</label>
               <input
                 name="email"
                 type="email"
@@ -125,7 +125,7 @@ const Register = () => {
             </div>
 
             <div>
-              <label className="text-sm font-medium text-gray-700">Password</label>
+              <label className="text-sm font-medium">Password</label>
               <div className="relative mt-1">
                 <input
                   name="password"
@@ -158,13 +158,13 @@ const Register = () => {
           <button
             type="button"
             onClick={handleGoogleSignIn}
-            className="btn btn-outline w-full flex items-center justify-center gap-2 text-gray-700 hover:bg-gray-100 transition"
+            className="btn btn-outline w-full flex items-center justify-center gap-2   transition"
           >
             <FaGoogle className="text-blue-500 text-xl" />
             Continue with Google
           </button>
 
-          <p className="text-center text-sm text-gray-600 mt-5">
+          <p className="text-center text-sm text-gray-500 mt-5">
             Already have an account?{' '}
             <Link to="/auth/login" className="text-blue-500 hover:underline font-medium">
               Login here

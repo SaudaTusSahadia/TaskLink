@@ -44,17 +44,17 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-white px-4 py-12">
+    <div className="min-h-screen flex items-center justify-center px-4 py-12">
       <title>Login | TaskLink</title>
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="bg-white shadow-2xl rounded-3xl border border-blue-300 w-full max-w-5xl flex flex-col md:flex-row overflow-hidden"
+        className=" shadow-2xl rounded-3xl border border-blue-300 w-full max-w-5xl flex flex-col md:flex-row overflow-hidden"
       >
         {/* Animation Section */}
-        <div className="md:w-1/2 bg-blue-100 flex items-center justify-center p-8">
+        <div className="md:w-1/2  flex items-center justify-center p-8">
           <Lottie animationData={loginAnimation} loop={true} className="w-full max-w-xs md:max-w-md" />
         </div>
 
@@ -113,7 +113,7 @@ const Login = () => {
           <button
             type="button"
             onClick={handleGoogleSignIn}
-            className="btn btn-outline w-full flex items-center justify-center gap-2 text-gray-700 hover:bg-gray-100 transition"
+            className="btn btn-outline w-full flex items-center justify-center gap-2  transition"
           >
             <FaGoogle className="text-blue-500 text-xl" />
             Continue with Google
